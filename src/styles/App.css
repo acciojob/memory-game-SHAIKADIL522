@@ -1,1 +1,52 @@
+.levels_container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 16px 0;
+}
 
+.attempts,
+.solved {
+    text-align: center;
+}
+
+.cells_container {
+    display: grid;
+    gap: 8px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.cells_container.easy {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cells_container.normal {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cells_container.hard {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #334155;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    user-select: none;
+}
+
+.cell.flipped {
+    background: #3b82f6;
+}
+
+.cell.matched {
+    background: #22c55e;
+    cursor: default;
+}
